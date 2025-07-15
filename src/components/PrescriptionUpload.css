@@ -1,0 +1,152 @@
+.prescription-upload {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .upload-container {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+  
+  .upload-area {
+    border: 2px dashed #cbd5e0;
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: #f8fafc;
+  }
+  
+  .upload-area:hover {
+    border-color: #667eea;
+    background: #f1f5f9;
+  }
+  
+  .upload-area.drag-over {
+    border-color: #667eea;
+    background: #e0e7ff;
+  }
+  
+  .upload-label {
+    display: block;
+    cursor: pointer;
+    color: #4a5568;
+  }
+  
+  .upload-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .file-selected {
+    color: #2d3748;
+  }
+  
+  .file-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .file-name {
+    font-weight: 600;
+    color: #2d3748;
+    margin: 0.5rem 0;
+  }
+  
+  .file-size {
+    color: #718096;
+    font-size: 0.9rem;
+  }
+  
+  .file-types {
+    color: #718096;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+  
+  .analyze-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .analyze-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  }
+  
+  .analyze-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  .reset-btn {
+    background: #f7fafc;
+    color: #4a5568;
+    border: 1px solid #e2e8f0;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .reset-btn:hover {
+    background: #edf2f7;
+  }
+  
+  .processing {
+    text-align: center;
+    padding: 2rem;
+    color: #4a5568;
+  }
+  
+  .spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #e2e8f0;
+    border-top: 4px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .error {
+    background: #fed7d7;
+    color: #c53030;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+  }
+  
+  .error h3 {
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .error p {
+    margin: 0;
+  }
+  

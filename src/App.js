@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import PrescriptionUpload from './components/PrescriptionUpload';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Prescription Analyzer</h1>
+        <p>Upload your prescription image for AI-powered analysis</p>
       </header>
+      <main className="App-main">
+        <PrescriptionUpload />
+      </main>
     </div>
   );
 }
