@@ -13,12 +13,17 @@ const PrescriptionUpload = () => {
   const [error, setError] = useState(null);
   const [qualityIssue, setQualityIssue] = useState(null);
   const [dragOver, setDragOver] = useState(false);
+  //const [patientId, setPatientId] = useState('');
 
   const handleFileSelect = (selectedFile) => {
     setFile(selectedFile);
     setResponse(null);
     setError(null);
   };
+
+  // const handlePatientIdChange = (e) => {
+  //   setPatientId(e.target.value); // 🔍 Handle patient ID input
+  // };
 
   const handleDrop = (e) => {
     e.preventDefault();
@@ -52,6 +57,11 @@ const analyzePresc = async () => {
       return;
     }
 
+    // if (!patientId || patientId.trim() === '') {
+    //   setError('Please enter a Patient ID');
+    //   return;
+    // }
+
     setIsProcessing(true);
     setError(null);
     setResponse(null);
@@ -60,6 +70,7 @@ const analyzePresc = async () => {
 
     const formData = new FormData();
     formData.append('prescription', file);
+    //formData.append('patient_id', patientId);
 
     try {
       const apiUrl = process.env.BACKEND_URL || '';
@@ -98,6 +109,17 @@ const analyzePresc = async () => {
   return (
     <div className="prescription-upload">
       <div className="upload-container">
+        {/* 🔍 Patient ID Input */}
+        {/* <div className="patient-id-section">
+          <label htmlFor="patientId">🔹 Enter Patient ID:</label>
+          <input
+            type="text"
+            id="patientId"
+            value={patientId}
+            onChange={handlePatientIdChange}
+            placeholder="e.g., patient_12456"
+          />
+        </div> */}
         <div 
           className={`upload-area ${dragOver ? 'drag-over' : ''}`}
           onDrop={handleDrop}
