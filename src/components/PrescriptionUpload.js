@@ -73,7 +73,7 @@ const analyzePresc = async () => {
     //formData.append('patient_id', patientId);
 
     try {
-      const apiUrl = process.env.BACKEND_URL || '';
+      const apiUrl = process.env.REACT_APP_BACKEND_URL || '';
       const result = await axios.post(`${apiUrl}/api/prescription/analyze`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
